@@ -107,9 +107,8 @@
                     class="gradient-text uppercase">ContractClarity</span></h1>
             <p
                 class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
-                "An advanced legal intelligence system designed to democratize contract analysis. ContractClarity serves
-                as a protective layer between users and complex legal agreements, identifying hidden liabilities through
-                a dual-engine architecture that ensures both accuracy and data privacy."
+                "A web-based AI powered application that helps users understand complex legal contracts by simplifying difficult legal language, highlighting risky clauses, and generating easy-to-read summaries. ContractClarity combines AI analysis using Google Gemini with rule-based extraction to provide structured insights from PDF and text contracts."
+
             </p>
         </section>
 
@@ -117,12 +116,8 @@
             <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
                 <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
                 <p class="text-slate-400 leading-relaxed text-justify">
-                    In the modern digital economy, individuals frequently encounter complex non-disclosure agreements
-                    (NDAs) and service contracts. These documents are often drafted with obfuscated clauses designed to
-                    hide unfair obligations and financial penalties. The average user lacks the legal expertise to
-                    identify these risks, leading to uninformed consent. This project addresses the critical need for an
-                    automated, accessible system that can deconstruct high-stakes legal language into transparent,
-                    actionable insights.
+                    Today, users frequently accept contracts such as Terms and Conditions, NDAs, and service agreements without fully understanding them due to complex legal language. This lack of understanding can lead to users unknowingly agreeing to unfavorable terms. There is a need for a system that can automatically simplify contracts and highlight important and risky clauses so that users can make informed decisions.
+
                 </p>
             </div>
             <div class="space-y-6">
@@ -130,21 +125,16 @@
                     <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Literature Review /
                         Market Research</h3>
                     <p class="text-sm text-slate-500 italic">
-                        Existing market solutions have significant limitations. Traditional keyword-based systems miss
-                        context, while general-purpose AI models often hallucinate or fail to catch strict legal
-                        constraints. Furthermore, many commercial tools operate as "black boxes," requiring full cloud
-                        uploads that pose privacy risks for confidential documentation.
+                        Existing solutions include manual legal review and some AI-based contract analysis tools. However, manual review is slow and requires legal expertise. Many AI tools focus only on summarization and do not provide structured risk insights. This project focuses on combining AI summarization with rule-based extraction to improve clarity and usability.
+
                     </p>
                 </div>
                 <div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
                     <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Research Gap /
                         Innovation</h3>
                     <p class="text-sm text-slate-500 italic">
-                        ContractClarity employs a Hybrid Architecture to bridge this gap. Unlike purely generative
-                        models, it uses a deterministic Rule Engine for extracting hard facts (dates, monetary values,
-                        jurisdiction) and focuses the Generative AI on semantic interpretation. This tiered approach
-                        ensures that critical data is accurate and reliable, avoiding the hallucination issues common in
-                        standard NLP pipelines.
+                        This project combines rule-based extraction and AI-based analysis. The rule-based system extracts important factual information such as dates, penalties, and obligations, while Google Gemini is used to simplify and summarize the contract. This combination improves both accuracy and readability.
+
                     </p>
                 </div>
             </div>
@@ -158,19 +148,16 @@
                     <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset / Input</h3>
                     <p class="text-sm text-slate-500">
-                        The system processes standard digital formats including PDF and Plain Text. A custom
-                        preprocessing layer normalizes file structures, extracting meaningful content while filtering
-                        out formatting noise. This direct extraction method preserves the structure of tables and tiered
-                        lists significantly better than standard optical character recognition (OCR).
+                        The system accepts contract files in PDF and text formats uploaded by the user. Text is extracted using libraries such as pdfplumber and processed for analysis. The extracted content is then used for rule-based extraction and AI-based summarization.
+
                     </p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Model / Architecture</h3>
                     <p class="text-sm text-slate-500">
-                        The architecture uses Google Gemini 1.5 Flash for intelligent summarization and risk scoring,
-                        operating alongside a custom Rule Engine. This hybrid pipeline allows the system to validate
-                        factual terms using strict logic, while leveraging cloud-based AI for complex legal reasoning.
+                        TThe system uses Google Gemini API to generate simplified summaries and explanations of contract content. A Python-based rule engine is used alongside to detect important keywords and extract specific contract details. The backend is implemented using Flask.
+
                     </p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
@@ -200,9 +187,8 @@
                         <span class="text-blue-400 font-mono font-black text-3xl">93%</span>
                     </div>
                     <p class="text-slate-500 text-sm italic text-justify leading-relaxed">
-                        Performance benchmarks indicate that this neuro-symbolic model achieves a 93% accuracy rate in
-                        flagging high-risk clauses, offering a significant improvement over standard single-modality NLP
-                        tools which typically plateau at ~70%.
+                        The system successfully generates simplified summaries and highlights important clauses from uploaded contracts. Testing with various agreement samples showed that the application can effectively improve readability and help users quickly understand key terms.
+
                     </p>
                 </div>
             </div>
@@ -212,13 +198,13 @@
             <h2 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.5em] mb-12">Academic Credits</h2>
             <div class="flex flex-wrap justify-center gap-10">
                 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-blue-600">
-                    <p class="text-[9px] font-bold text-blue-500 mb-2 uppercase tracking-widest">Department</p>
-                    <p class="font-black text-xl text-slate-100">Computer Science & Engineering</p>
+                    <p class="text-[9px] font-bold text-blue-500 mb-2 uppercase tracking-widest">Project Guide</p>
+                    <p class="font-black text-xl text-slate-100">Dr. Mayank Namdev</p>
                 </div>
                 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-slate-700">
                     <p class="text-[9px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Solo Developer</p>
-                    <p class="font-black text-xl text-slate-100">Student & Engineer</p>
-                    <p class="text-[10px] text-slate-500 mt-1">Project Lead</p>
+                    <p class="font-black text-xl text-slate-100">Jayant Kumar</p>
+                    <p class="text-[10px] text-slate-500 mt-1">2427030448</p>
                 </div>
             </div>
         </section>
