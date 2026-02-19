@@ -191,7 +191,7 @@ System Flowchart
 <div class="mermaid mx-auto"
 style="
 min-width:1100px;
-transform: scale(1.7);
+transform: scale(1.8);
 transform-origin: top left;
 ">
 
@@ -202,7 +202,7 @@ B --> C[Flask Backend Receives File<br>app.py]
 C --> D[Extract Text from File]
 D --> E{Gemini API Key Available?}
 E -- Yes --> F[AI Analysis<br>analyzer.py<br>Google Gemini]
-E -- No --> G[Rule-Based Analysis<br>rule_based.py<br>Regex Detection]
+E -- No --> G[Rule-Based Analysis<br>rule_based.py]
 F --> H[Generate Risk Score<br>Summary & Advice]
 G --> H
 H --> I[Highlight Risky Clauses<br>highlighter.py<br>PyMuPDF]
