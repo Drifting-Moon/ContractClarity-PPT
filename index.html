@@ -7,6 +7,9 @@
     <title>PBL Presentation | 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
@@ -172,6 +175,50 @@
                     
                 </div>
             </div>
+            <!-- FLOWCHART SECTION START -->
+
+<div class="glass p-10 rounded-[2.5rem] border-t-4 border-purple-500 mt-12">
+
+<h3 class="text-2xl font-extrabold mb-6 text-center uppercase">
+System Flowchart
+</h3>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[User Opens Website<br>index.html] --> B[User Uploads Contract File]
+
+B --> C[Flask Backend Receives File<br>app.py]
+
+C --> D[Extract Text from File]
+
+D --> E{Gemini API Key Available?}
+
+E -- Yes --> F[AI Analysis<br>analyzer.py<br>Google Gemini]
+
+E -- No --> G[Rule-Based Analysis<br>rule_based.py<br>Regex Detection]
+
+F --> H[Generate Risk Score<br>Summary & Advice]
+
+G --> H
+
+H --> I[Highlight Risky Clauses<br>highlighter.py<br>PyMuPDF]
+
+I --> J[Send Results to Flask<br>app.py]
+
+J --> K[Display Results to User<br>index.html]
+
+K --> L[Delete Uploaded File<br>Privacy Protection]
+
+L --> M[End]
+
+</div>
+
+</div>
+
+<!-- FLOWCHART SECTION END -->
+
         </section>
 
         <section id="results" class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
@@ -217,6 +264,12 @@
     </footer>
 
     <script>
+
+        mermaid.initialize({
+        startOnLoad: true,
+        theme: "dark",
+        securityLevel: "loose"
+        });
         // TIMER LOGIC
         let sec = 0;
         let timer = null;
@@ -262,6 +315,7 @@
                 }
             }
         });
+
     </script>
 </body>
 
