@@ -64,20 +64,20 @@
         <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
             <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
             <p class="text-slate-400 leading-relaxed text-justify">
-                Traditional voting systems store votes in a central database controlled by one authority. This creates a single point of failure — it can be hacked, manipulated, or simply not trusted. Voters have no way to independently verify that their vote was counted correctly. There is a need for a system where the rules are enforced by code, not humans, and every vote is permanently and publicly verifiable.
+                Traditional voting systems store votes in a central database controlled by one authority. This creates a single point of failure, it can be hacked, manipulated, or simply not trusted. Voters have no way to independently verify that their vote was counted correctly. There is a need for a system where the rules are enforced by code, not humans, and every vote is permanently and publicly verifiable.
             </p>
         </div>
         <div class="space-y-6">
             <div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
                 <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Literature Review</h3>
                 <p class="text-sm text-slate-500 italic">
-                    Existing e-voting systems either use centralized databases (hackable) or require complex setup like MetaMask wallets (not user-friendly). Research shows that blockchain-based voting can solve both problems — decentralizing storage while keeping the process simple for voters. Our system uses a backend wallet so voters need no crypto knowledge at all.
+                    Existing electronic voting systems have two main problems. Systems that use central databases are vulnerable to hacking and manipulation. Systems that use blockchain are too technical and complicated for ordinary voters to use. Neither solution manages to be both secure and simple at the same time. This gap motivated the development of VoteChain, a system that brings the security of blockchain to ordinary voters without requiring any technical knowledge on their part.
                 </p>
             </div>
             <div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
-                <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Our Innovation</h3>
+                <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Innovation</h3>
                 <p class="text-sm text-slate-500 italic">
-                    VoteChain removes the need for MetaMask or any crypto wallet on the voter's side. The backend signs and submits the transaction on behalf of the voter. This makes blockchain voting accessible to anyone — while keeping all the security benefits. Every vote produces a real transaction hash that anyone can verify.
+                    VoteChain is designed to be simple for the voter and secure on the backend. The voter only needs to log in with an OTP, select a candidate, and click vote. Everything else happens automatically in the background. The vote is recorded as a permanent transaction on the Ethereum blockchain and a unique transaction hash is returned to the voter as proof that their vote was stored and cannot be changed. No technical knowledge is required from the voter at any point.
                 </p>
             </div>
         </div>
